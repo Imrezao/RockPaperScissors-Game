@@ -18,12 +18,18 @@ class RockPaperScissors:
         self.name = name
         
     def get_user_choice(self) -> str:
+        inpurt_map = {
+            '1': 'rock', 'rock': 'rock',
+            '2': 'paper', 'paper': 'paper',
+            '3': 'Scissors', 'scissors': 'scissors'
+        }
         while True:
-            user_input: str = input('Enter your choice:\n1-Rock \n2-Paper \n3-Scissors\n')
-            if user_input == 'q':
+            user_input: str = input('Enter your choice (q to quit):\n1-Rock \n2-Paper \n3-Scissors\n')
+            if user_input.strip().lower() == 'q':
                 print('Good Bye')
                 sys.exit()
-            if user_input.lower() in self.choices:
+
+            if user_input.strip().lower() in inpurt_map:
                 return user_input.lower()
 
             print('Invalid choice, try again')
