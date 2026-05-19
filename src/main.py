@@ -56,5 +56,5 @@ if __name__ == '__main__':
         if input().lower() == 'y':
             continue
 
-        print('good bye')
+        print('Good Bye')
         break
