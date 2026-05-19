@@ -5,6 +5,7 @@ Description: RockPaperScissor Game.
 """
 
 import random
+import sys
 from typing import List, Tuple          
 
 
@@ -18,10 +19,13 @@ class RockPaperScissors:
         
     def get_user_choice(self) -> str:
         while True:
-            user_input: str = input('Enter your choice (rock/paper/scissors): ')
+            user_input: str = input('Enter your choice:\n1-Rock \n2-Paper \n3-Scissors\n')
+            if user_input == 'q':
+                print('Good Bye')
+                sys.exit()
             if user_input.lower() in self.choices:
                 return user_input.lower()
-            
+
             print('Invalid choice, try again')
             return self.get_user_choice()
 
