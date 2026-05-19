@@ -12,6 +12,7 @@ from typing import List, Tuple
 class RockPaperScissors:
     """
     Main class for RockPaperScissor Game.
+    This class handles user inputs, computer selections, determining winners.
     """
     def __init__(self,choices, name) -> None:
         self.choices: list[str] = choices
@@ -62,7 +63,7 @@ if __name__ == '__main__':
 
     while True:
         game.play()
-        print('Do u wanna play again? y/n')
+        print('Do u wanna play again? y/n: ')
         if input().lower() == 'y':
             continue
 
